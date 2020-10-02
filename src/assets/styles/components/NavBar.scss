@@ -1,0 +1,124 @@
+@import "../Media.scss";
+@import "../Vars.scss";
+
+.nav {
+    @include NavBarEstilos(100%, 100px);
+    &__logo {
+        width: 14vmax;
+        height: 5vmax;
+        cursor: pointer;
+    }
+    
+    &__enlaces {
+        display: flex;
+        justify-content: space-between;
+        width: 30vmax;
+        @include media(mobile-only) {
+            display: block;
+            position: absolute;
+            padding: 20px 0 15px 0;
+            margin-left: 5%;
+            width: 90%;
+            height: 50vmax;
+            color: black;
+            top: -100vh;
+            text-align: center;
+            background: $Color-BlackLinear;
+            font-size: calc(1em + 1vw);
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+        &.is-active {
+            top: 120px;
+        }
+        li {
+            @include media(mobile-only) {
+                padding: 18px;
+            }
+            .nav__enlaces--a1, .nav__enlaces--a2 {
+                display: none;
+                margin: 0 35px;
+            }
+            .nav__enlaces--a1 {
+                @include media(mobile-only) {
+                    display: inline-block;
+                    @include ButtonStyle(100px, 35px, $Dorado, $Color-BlackLinear, $Dorado);
+                    margin-bottom: 15px;
+                }
+            }
+            .nav__enlaces--a2 {
+                @include media(mobile-only) {
+                    display: inline-block;
+                    @include ButtonStyle(100px, 35px, $White, $AzulPastel, $Dorado);
+                }
+            }
+        }
+        a {
+            color: $White;
+            font-size: calc(0.7em + 0.8vw);
+        }
+        a:hover, a:focus {
+            color: $Dorado;
+        }
+    }
+    &__Button {
+        padding: 10px;
+        &--a1 {
+            display: Block;
+            margin: 10px;
+            @include ButtonStyle(100px, 35px, $Dorado, $Color-BlackLinear, $Dorado);
+            @include media(mobile-only) {
+                display: none;
+            }
+        }
+        &--a2 {
+            display: Block;
+            margin: 10px;
+            @include ButtonStyle(100px, 35px, $White, $AzulPastel, $Dorado);
+            @include media(mobile-only) {
+                display: none;
+            }
+        }
+        /*Clase para controlar mi menu Burger*/
+        .burger-button {
+            display: none;
+            margin-top: 30px;
+            margin-right: 20px;
+            img {
+                position: relative;
+            }
+            .Icono-burger{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                right: 35px;
+                width: 30px;
+                height: 25px;
+                top: 40px;
+                filter: invert(1);
+                &.is-active {
+                    position: absolute;
+                    top: -100vw;
+                }
+            }
+            .Icono-close {
+                top: -100vw;
+                position: relative;
+                width: 30px;
+                height: 30px;
+                filter: invert(1);
+                &.is-active {
+                    display: flex;
+                    position: absolute;
+                    top: 40px;
+                    right: 35px;
+                }
+            }
+        }
+        .burger-button {
+            @include media(mobile-only) {
+                display: block;
+            }
+        }
+    }
+}

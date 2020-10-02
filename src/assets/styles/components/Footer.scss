@@ -1,0 +1,34 @@
+@import "../Media.scss";
+@import "../Vars.scss";
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: $Color-BlackLinear;
+  width: 100%;
+  max-width: 100%;
+  height: 70px;
+  font-size: calc(0.5em + 0.8vw);
+  padding: 20px;
+  @include media(mobile-only) {
+      font-size: calc(0.5em + 0.4vw);
+  }
+  a {
+      color: $White;
+  }
+  &__DerechosReservados {
+      @include media(mobile-only) {
+          width: 40%;
+          text-align: center;
+      }
+  }
+  img {
+      width: 3.5vmax;
+  }
+  &__PlatziMaster {
+      display: flex;
+      align-items: center;
+  }
+}

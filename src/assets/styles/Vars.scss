@@ -1,0 +1,72 @@
+@import "./Media.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/*Paleta de Colores*/
+$Color-BlackLinear: linear-gradient(hsl(205, 5%, 0%), hsl(205, 5%, 28%));
+$White: hsl(0, 0%, 100%);
+$Dorado: hsl(36, 31%, 61%);
+$DoradoPastel: hsl(36, 37%, 79%);
+$AzulPastel: hsl(198, 57%, 37%);
+$RosaPastel: hsl(0, 12%, 85%);
+$Cafe: hsl(36, 74%, 27%);
+$RosaClaro: hsl(0, 9%, 44%);
+$GrisPastel:hsl(0, 0%, 95%);
+$GrisClaro:hsl(0, 0%, 88%);
+$GrisClaro2:hsl(0, 0%, 40%);
+$Negro:hsl(0, 0%, 0%);
+$NegroClaro:hsl(0, 0%, 40%);
+
+/*Font Family*/
+$font-weight1: 200;
+$font-weight2: 400;
+$font-weight3: 600;
+$font-family: 'Public Sans', sans-serif;
+
+// Sombras
+$sombra1: 4px 8px 8px 2px rgba(0, 0, 0, 0.15);
+
+/*Mixins*/
+@mixin NavBarEstilos($width, $height) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $width;
+    max-width: 100%;
+    height: $height;
+    max-height: 100px;
+    background: $Color-BlackLinear;
+}
+
+@mixin ImageInput {
+    background-size: 25px;
+    display: flex;
+    align-items: center;
+    width: 30vmax;
+    padding-left: 40px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+@mixin ImageInputGoogle($width, $height, $marginTB) {
+    background-size: 25px;
+    display: flex;
+    align-items: center;
+    width: $width;
+    padding-left: 40px;
+    height: $height;
+    border-radius: 15px;
+    margin: $marginTB auto;
+}
+
+
+@mixin ButtonStyle($width, $height, $Color, $Bgcolor, $ColorBorde) {
+    width:$width;
+    height:$height;
+    border-radius: 20px;
+    color: $Color;
+    background-color: $Bgcolor;
+    border: 3px solid $ColorBorde;
+    text-align: center; 
+    cursor: pointer;
+}

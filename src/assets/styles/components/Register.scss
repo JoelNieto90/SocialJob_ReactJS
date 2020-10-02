@@ -1,0 +1,172 @@
+@import "../App.scss";
+
+.mainRegister {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85%;
+    margin: 20px auto;
+    padding: 5px;
+    @include media(mobile-only) {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px;
+        margin: auto;
+    }
+    .Card1 {
+        width: 35vmax;
+        height: 40vmax;
+        box-shadow: 0 1px 6px 0 #20212447;
+        @include media(mobile-only) {
+            height: 45vmax;
+        }
+        img {
+            width: 40vmax;
+            max-width: 100%;
+            height: 30vmax;
+        }
+        p{
+            font-size: calc(0.8em + 1vw);
+            color: $Cafe;
+            @include media(mobile-only) {
+                font-size: calc(0.8em + 0.8vw);
+            }
+        }
+        span {
+            margin: 20px 10px;
+            font-size: calc(0.6em + 0.6vw);
+            @include media(mobile-only) {
+                font-size: calc(0.5em + 0.6 vw);
+            }
+        }
+    }
+
+    .Card2 {
+        display: flex;
+        flex-direction: column;
+        width: 30vmax;
+        height: 40vmax;
+        margin-left: 20px;
+        border-radius: 15%;
+        background: $DoradoPastel;
+        @include media(mobile-only) {
+            height: 55vmax;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+        .input{
+            display: block;
+            width: 85%;
+            margin: 3% auto;
+            @include media(mobile-only){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+            }
+            &__icono--1 {
+                //background-image: url('../Assets/googleG.png');
+                background-repeat: no-repeat;
+                background-position: 4px center;
+                background-color: $White;
+                margin: 0 1%;
+                @include ImageInputGoogle(33%, 40px, 4%);
+                input {
+                    width: 90%;
+                    height: 35px;
+                }
+                @include media(mobile-only) {
+                    @include ImageInputGoogle(15vmax, 40px, 8%);
+                }
+            }
+            &__icono--2 {
+                //background-image: url('../Assets/usuario.png');
+                background-repeat: no-repeat;
+                background-position: 4px center;
+                background-size: 20px;
+                background-color: $White;
+                margin: 0 5px;
+                @include ImageInputGoogle(20vmax, 4vmax, 4%);
+                input {
+                    width: 96%;
+                    //height: 40px;
+                }
+                @include media(mobile-only) {
+                    @include ImageInputGoogle(21vmax, 48px, 3%);
+                }
+            }
+            &__icono--3 {
+                //background-image: url('../Assets/credencial.png');
+                background-repeat: no-repeat;
+                background-position: 4px center;
+                background-size: 20px;
+                background-color: $White;
+                margin: 0 5px;
+                @include ImageInputGoogle(20vmax, 4vmax, 4%);
+                input {
+                    width: 96%;
+                    //height: 40px;
+                }
+                @include media(mobile-only) {
+                    @include ImageInputGoogle(21vmax, 48px, 3%);
+                }
+            }
+            &__icono--4 {
+                //background-image: url('../Assets/correo.png');
+                background-repeat: no-repeat;
+                background-position: 4px center;
+                background-size: 20px;
+                background-color: $White;
+                margin: 0 5px;
+                @include ImageInputGoogle(20vmax, 4vmax, 4%);
+                input {
+                    width: 96%;
+                    //height: 40px;
+                }
+                @include media(mobile-only) {
+                    @include ImageInputGoogle(21vmax, 48px, 3%);
+                }
+            }
+            &__icono--5 {
+                //background-image: url('../Assets/llave.png');
+                background-repeat: no-repeat;
+                background-position: 4px center;
+                background-size: 20px;
+                background-color: $White;
+                margin: 0 5px;
+                @include ImageInputGoogle(20vmax, 4vmax, 4%);
+                input {
+                    width: 96%;
+                    //height: 40px;
+                }
+                @include media(mobile-only) {
+                    @include ImageInputGoogle(21vmax, 48px, 7%);
+                }
+            }
+        }
+        .buttonText{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            margin-top: 1%;
+            width: 100%;
+            a {
+                display: block;
+                margin:auto;
+                padding-top: 5px;
+                font-size: calc(0.5em + 0.5vw);
+                @include ButtonStyle(15vmax, 40px, $White, $AzulPastel, $AzulPastel);
+                @include media(mobile-only) {
+                    @include ButtonStyle(130px, 35px, $White, $AzulPastel, $AzulPastel);
+                    border-radius: 25px;
+                }
+            }
+            a:hover, a:focus {
+                color: $Dorado;
+                opacity: 0.9;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,136 @@
+@import "../Media.scss";
+@import "../Vars.scss";
+
+.main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    @include media(mobile-only){
+        width:95%;
+    }
+    .Busqueda {
+        background-image: url("../../static/roca.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        object-fit: contain;
+        border-radius: 40px;
+        height: 250px;
+        @include media(mobile-only) {
+          background-size: 500px;
+          height: 300px;
+          width: 90vw;
+          border-radius: 25px;
+        }
+        h1 {
+          color: $RosaPastel;
+          margin-top: 20px;
+          font-size: calc(1em + 1.1vw);
+          letter-spacing: 5px;
+        }
+        &__input {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          width: 85%;
+          margin: 18px auto;
+          @include media(mobile-only) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          &__icono--1 {
+            background-image: url("../../static/buscar.png");
+            background-repeat: no-repeat;
+            background-position: 4px center;
+            background-color: $White;
+            margin: 0 5px;
+            @include ImageInput();
+            input {
+              width: 96%;
+              height: 40px;
+              border: 0;
+              outline: none;
+            }
+            @include media(mobile-only) {
+              margin-bottom: 20px;
+            }
+          }
+          &__icono--2 {
+            background-image: url("../../static/alfiler.png");
+            background-repeat: no-repeat;
+            background-position: 4px center;
+            background-size: 20px;
+            background-color: $White;
+            margin: 0 5px;
+            @include ImageInput();
+            input {
+              width: 96%;
+              height: 40px;
+              border: 0;
+              outline: none;
+            }
+          }
+        }
+        a {
+          display: block;
+          margin: 30px auto;
+          padding-top: 10px;
+          font-size: calc(0.7em + 0.6vw);
+          @include ButtonStyle(250px, 60px, $White, $AzulPastel, $AzulPastel);
+          @include media(mobile-only) {
+            @include ButtonStyle(200px, 45px, $White, $AzulPastel, $AzulPastel);
+            border-radius: 10px;
+          }
+        }
+        a:hover,
+        a:focus {
+          color: $Dorado;
+          opacity: 0.9;
+        }
+      }
+    .textHome {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 20px;
+        @include media(mobile-only){
+            display: block
+        }
+        &__Text {
+            h2 {
+                width: 60%;
+                margin: auto;
+                font-size: calc(1.5em + 1.4vw);
+                @include media(mobile-only){
+                    font-size: calc(1.1em + 1.3vw);
+                }
+            }
+            a {
+                display: block;
+                margin: 30px auto;
+                font-size: calc(0.7em + 0.6vw);
+                @include ButtonStyle(180px, 45px, $White, $AzulPastel, $AzulPastel);
+                @include media(mobile-only){
+                    font-size: calc(0.8em + 1vw);
+                    padding-top: 5px;
+                }
+            }
+            a:hover, a:focus {
+                color: $Dorado;
+                opacity: 0.9;
+            }
+        }
+        &__image {
+            display: block;
+            align-items: center;
+            width: 80%;
+            margin: auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

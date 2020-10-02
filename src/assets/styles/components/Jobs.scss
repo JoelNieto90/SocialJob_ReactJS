@@ -1,0 +1,179 @@
+@import "../App.scss";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  @include media(mobile-only) {
+    width: 90%;
+  }
+  .Cards {
+    display: grid;
+    grid-template-columns: 30% 20% 48%;
+    margin: 40px auto;
+    box-shadow: 2px 5px 6px 3px #20212447;
+    background-color: $GrisPastel;
+    @include media(mobile-only) {
+      display: flex;
+      flex-direction: column;
+    }
+    &__Graph {
+      width: 100%;
+      h1 {
+        font-size: calc(0.8em + 0.7vw);
+        font-weight: $font-weight3;
+        color: $AzulPastel;
+        width: 90%;
+        margin: 10px;
+        text-transform: uppercase;
+        @include media(mobile-only) {
+          font-size: calc(1em + 1vw);
+          margin: 20px;
+        }
+      }
+      hr {
+        border: 1px solid $Dorado;
+        width: 90%;
+        margin: auto;
+      }
+      &__map {
+        display: flex;
+        width: 80%;
+        margin: 8% auto;
+        img {
+          width: 25px;
+          height: 25px;
+          margin: auto 20px;
+        }
+        h3 {
+          font-size: calc(0.5em + 0.4vw);
+          color: $NegroClaro;
+          font-weight: $font-weight2;
+          width: 100%;
+          @include media(mobile-only) {
+            font-size: calc(0.6em + 0.7vw);
+            margin: 0px;
+          }
+        }
+      }
+      .buttonText {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        margin-top: 1%;
+        width: 100%;
+        a {
+          display: block;
+          margin: auto;
+          padding-top: 4px;
+          font-size: calc(0.6em + 0.5vw);
+          @include ButtonStyle(9vmax, 2.5vmax, $White, $Dorado, $Dorado);
+          @include media(mobile-only) {
+            @include ButtonStyle(110px, 35px, $White, $Dorado, $Dorado);
+            border-radius: 25px;
+            font-size: calc(0.7em + 0.7vw);
+          }
+        }
+        a:hover,
+        a:focus {
+          color: $White;
+          opacity: 0.9;
+          font-size: calc(0.6em + 0.7vw);
+        }
+      }
+      .buttonSkils {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1%;
+        width: 100%;
+        a {
+          display: block;
+          margin: 15px 10px 15px;
+          padding-top: 5px;
+          font-size: calc(0.4em + 0.5vw);
+          @include ButtonStyle(7vmax, 2.5vmax, $Negro, $White, $Negro);
+          @include media(mobile-only) {
+            @include ButtonStyle(90px, 35px, $Negro, $White, $Negro);
+            border-radius: 25px;
+            font-size: calc(0.5em + 0.5vw);
+          }
+        }
+        a:hover,
+        a:focus {
+          color: $Negro;
+          opacity: 0.9;
+          font-size: calc(0.6em + 0.5vw);
+        }
+      }
+    }
+
+    &__Image {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      img {
+        margin-top: 10px;
+        width: 11vmax;
+        height: 11vmax;
+        @include media(mobile-only) {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      h2 {
+        font-size: calc(0.6em + 0.6vw);
+        color: $GrisClaro2;
+        @include media(mobile-only) {
+          font-size: calc(0.8em + 1vw);
+        }
+      }
+      h3 {
+        font-size: calc(0.6em + 0.6vw);
+        color: $Dorado;
+        font-weight: $font-weight3;
+        @include media(mobile-only) {
+          font-size: calc(0.8em + 1vw);
+        }
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+      }
+      li {
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    &__Text {
+      padding: 10px;
+      margin: auto;
+      @include media(mobile-only) {
+        padding: 20px;
+      }
+      h1 {
+        font-size: calc(0.9em + 0.8vw);
+        text-align: justify;
+        @include media(mobile-only) {
+          font-size: calc(1em + 1vw);
+        }
+      }
+      p {
+        font-size: calc(0.45em + 0.5vw);
+        font-weight: $font-weight1;
+        text-align: justify;
+        @include media(mobile-only) {
+          font-size: calc(0.6em + 0.7vw);
+        }
+      }
+    }
+  }
+}

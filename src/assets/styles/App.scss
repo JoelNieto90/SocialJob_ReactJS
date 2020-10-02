@@ -1,0 +1,33 @@
+@import "./Vars.scss";
+@import "./Media.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a,
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 100px 1fr 70px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  @include media(mobile-only){
+      width:95%;
+  }
+}

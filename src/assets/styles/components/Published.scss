@@ -1,0 +1,129 @@
+@import "../App.scss";
+
+.main {
+    width: 100%;
+    margin-bottom: 2vmax;
+  }
+  .main .Banner {
+    width: 100%;
+    max-width: 100%;
+  }
+  .main .Banner img {
+    width: 100%;
+    height: 80%;
+  }
+  .main .Banner p {
+    position: absolute;
+    color: white;
+    font-size: calc(2em + 2.3vw);
+    font-weight: 600;
+    left: 0;
+    margin-top: 5%;
+  }
+  @media only screen and (max-width: 700px) {
+    .main .Banner p {
+      margin-top: 1%;
+      font-size: calc(0.4em +0.4vw);
+    }
+  }
+  .main .published {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+  }
+  @media only screen and (max-width: 700px) {
+    .main .published {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+    }
+  }
+  .main .published__image img {
+    width: 20vmax;
+  }
+  @media only screen and (max-width: 700px) {
+    .main .published__image img {
+      display: none;
+    }
+  }
+  .main .published__Text {
+    width: 70%;
+    margin-left: 3%;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+  }
+  @media only screen and (max-width: 700px) {
+    .main .published__Text {
+      width: 100%;
+      border-radius: 15px;
+      margin: auto;
+    }
+  }
+  .main .published__Text h1 {
+    margin-top: 2vmax;
+  }
+  .main .published__Text__Inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2% auto;
+  }
+  .main .published__Text__Inputs label {
+    color: #7a6666;
+    font-size: calc(0.6em + 0.9vw);
+    width: 20%;
+  }
+  .main .published__Text__Inputs input {
+    width: 22vmax;
+    height: 3vmax;
+    border-radius: 10px;
+  }
+  .main .published__Text__Inputs textarea {
+    width: 35%;
+    resize: none;
+  }
+  @media only screen and (max-width: 700px) {
+    .main .published__Text__Inputs textarea {
+      width: 65%;
+    }
+  }
+  .main .published .buttonText {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 100%;
+    margin-bottom: 2vmax;
+  }
+  .main .published .buttonText a {
+    display: block;
+    margin: auto;
+    padding-top: 5px;
+    font-size: calc(0.6em + 0.6vw);
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    background-color: #297494;
+    border: 3px solid #297494;
+    text-align: center;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 700px) {
+    .main .published .buttonText a {
+      width: 130px;
+      height: 35px;
+      border-radius: 20px;
+      color: white;
+      background-color: #297494;
+      border: 3px solid #297494;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 25px;
+    }
+  }
+  .main .published .buttonText a:hover, .main .published .buttonText a:focus {
+    color: #baa27d;
+    opacity: 0.9;
+  }
+  

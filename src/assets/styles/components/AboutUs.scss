@@ -1,0 +1,105 @@
+@import "../App.scss";
+
+.mainAboutUs {
+    width: 100%;
+    .Banner {
+        width: 100%;
+        max-width: 100%;
+        img {
+            width: 100%;
+            height: 80%;
+        }
+        p {
+            position: absolute;
+            color: $White;
+            font-size: calc(2em + 2.3vw);
+            font-weight: $font-weight3;
+            right: 0;
+            margin-top: 5%;
+            @include media(mobile-only){
+                margin-top: 3%;
+            }
+        }
+    }
+    .history {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin: auto;
+        @include media(mobile-only) {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+        &__image {
+            img {
+                width: 35vmax;
+            }
+        }
+        &__Text {
+            width: 80%;
+            margin-left: 3%;
+            h1 {
+                font-size: calc(1.5em + 1.6vw);
+                font-weight: $font-weight3;
+            }
+            p {
+                font-size: calc(0.6em + 0.7vw);
+                text-align: justify;
+            }
+        }
+    }
+
+    .valores {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+        @include media(mobile-only){
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+        &__imagenes {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: auto 70px;
+            width: 100%;
+            @include media(mobile-only){
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                width: 80%;
+            }
+            img {
+                width: 12vmax;
+            }
+            p {
+                font-size: calc(1em + 1.2vw);
+                font-weight: $font-weight3;
+            }
+        }
+        &__Text {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            @include media(mobile-only){
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+            }
+            p {
+                font-size: calc(0.5em + 0.5vw);
+                margin: auto 4%;  
+                padding-bottom: 4%;
+                text-align: justify;
+                @include media(mobile-only){
+                    margin: auto;  
+                    font-size: calc(0.6em + 0.6vw);
+                }
+            }
+        }
+    }
+}
