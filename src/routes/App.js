@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 import Home from '../containers/Home';
 import NotFound from '../containers/NotFound';
-//import Layout from '../components/Layout';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import SignIn from '../components/SingIn';
@@ -37,7 +36,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className='App'>
-          <NavBar user={this.state.user} setUser={this.setUser}/>
+          <NavBar user={this.state.user} setUser={this.setUser} />
           <Switch>
             <Route
               exact
@@ -47,7 +46,7 @@ export default class App extends Component {
             <Route
               exact
               path='/signin'
-              component={SignIn}
+              component={() => <SignIn setUser={this.setUser} />}
             />
             <Route
               exact

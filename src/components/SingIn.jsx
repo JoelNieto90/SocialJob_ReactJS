@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 import '../assets/styles/App.scss';
 import '../assets/styles/components/SignIn.scss';
 import SocialJobDark from '../assets/static/SocialJobDark.PNG';
@@ -22,7 +22,7 @@ export default class SingIn extends Component {
       .then((res) => {
         localStorage.setItem('token', res.data.data.token);
         const { token } = res.data.data;
-        const decode = jwt_decode(token);
+        const decode = jwtDecode(token);
         const { id } = decode;
         const { username } = decode;
         const { email } = decode;
