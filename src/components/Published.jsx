@@ -7,7 +7,7 @@ import MovileSocialJobs from '../assets/static/MovileSocialJobs.PNG';
 import BannerPublished from '../assets/static/BannerPublished.PNG';
 
 const Published = () => (
-  <main className='main'>
+  <main className='mainPublished'>
     <section className='Banner'>
       <p>Published</p>
       <img src={BannerPublished} alt='Banner Published' />

@@ -1,23 +1,26 @@
 @import '../App.scss';
 
 .mainSignIn {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 540px;
   height: 580px;
   background: $Color-BlackLinear;
   border-radius: 80px;
-  margin-bottom: 20px;
+  margin: 20px auto;
   @include media(mobile-only) {
     width: 80%;
     height: 580px;
   }
   .article {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .input {
     display: block;
     width: 85%;
-    margin: 18px auto;
+    margin: 15px auto;
     @include media(mobile-only) {
       display: flex;
       flex-direction: column;
@@ -31,7 +34,7 @@
       background-position: 4px center;
       background-color: $White;
       margin: 0 5px;
-      @include ImageInputGoogle(8vmax, 40px, 22px);
+      @include ImageInputGoogle(8vmax, 40px, 15px);
       input {
         width: 90%;
         height: 35px;
@@ -72,13 +75,8 @@
         @include ImageInputGoogle(28vmax, 45px, 22px);
       }
     }
-  }
-  .buttonText {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    width: 100%;
-    a {
+
+    .button {
       display: block;
       margin: auto;
       padding-top: 5px;
@@ -89,8 +87,8 @@
         border-radius: 25px;
       }
     }
-    a:hover,
-    a:focus {
+    .button:hover,
+    .button:focus {
       color: $Dorado;
       opacity: 0.9;
     }

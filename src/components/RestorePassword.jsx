@@ -16,7 +16,7 @@ const RestorePassword = () => (
       </div>
     </section>
     <section className='buttonText'>
-      <Link to='/jobs'>Sign In</Link>
+      <Link to='/jobs'>Restore</Link>
     </section>
     <section className='EnlacesText'>
       <p>

@@ -151,7 +151,7 @@
             justify-content: end;
             margin-top: 1%;
             width: 100%;
-            a {
+            .button {
                 display: block;
                 margin:auto;
                 padding-top: 5px;
@@ -162,7 +162,7 @@
                     border-radius: 25px;
                 }
             }
-            a:hover, a:focus {
+            .button:hover, .button:focus {
                 color: $Dorado;
                 opacity: 0.9;
             }
