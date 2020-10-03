@@ -61,7 +61,7 @@ export default class App extends Component {
             <Route
               exact
               path='/published'
-              component={Published}
+              component={() => <Published user={this.state.user} />}
             />
             <Route
               exact
@@ -71,7 +71,7 @@ export default class App extends Component {
             <Route
               exact
               path='/perfil'
-              component={Perfil}
+              component={() => <Perfil user={this.state.user} />}
             />
             <Route
               exact
