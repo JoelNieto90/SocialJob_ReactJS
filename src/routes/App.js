@@ -7,6 +7,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import SignIn from '../components/SingIn';
 import Register from '../components/Register';
+import RegisterUpdate from '../components/RegisterUpdate';
 import AboutUs from '../components/AboutUs';
 import Published from '../components/Published';
 import Jobs from '../components/Jobs';
@@ -58,6 +59,11 @@ export default class App extends Component {
               exact
               path='/register'
               component={Register}
+            />
+            <Route
+              exact
+              path='/registerupdate'
+              component={() => <RegisterUpdate user={this.state.user} />}
             />
             <Route
               exact

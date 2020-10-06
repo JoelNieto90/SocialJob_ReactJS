@@ -8,11 +8,10 @@ import fotoPrueba from '../assets/static/fotoPrueba.jpg';
 import intersect from '../assets/static/Intersect.png';
 import editar from '../assets/static/editar.png';
 
-
 export default class Perfil extends Component {
   state = {};
 
-  handleClick = (e) => {
+  handleClickDelete = (e) => {
     if (this.props.user) {
       const { id } = this.props.user;
       e.preventDefault();
@@ -55,21 +54,29 @@ export default class Perfil extends Component {
     return (
       <main className='container'>
         <section className='perfil'>
-          <button className='perfil__editar' style={{ backgroundImage: `url(${editar})` }}/>
+          <Link to='/registerupdate'>
+            <button
+              className='perfil__editar'
+              style={{ backgroundImage: `url(${editar})` }}
+            />
+          </Link>
           <figure className='perfil__img'>
             <img src={fotoPrueba} alt='Foto de perfil' />
           </figure>
           <p className='perfil__datos--nombre'>Luis Orlando Castañeda</p>
           <p className='perfil__datos--edad'>25 años</p>
           <p className='perfil__datos--locacion'>Tonalá, Jalisco</p>
-          <div className='perfil__profesion' style={{ backgroundImage: `url(${intersect})` }}>
+          <div
+            className='perfil__profesion'
+            style={{ backgroundImage: `url(${intersect})` }}
+          >
             <p className='perfil__profesion-titulo'>
               Ingeniero en computacion
               {' '}
             </p>
           </div>
           <section>
-            <Link to='/' className='button' onClick={this.handleClick}>
+            <Link to='/' className='button' onClick={this.handleClickDelete}>
               Delete User
             </Link>
           </section>
@@ -81,7 +88,7 @@ export default class Perfil extends Component {
           </Link>
         </div>
         <section className='info-general'>
-          <button className='info-general__editar'/>
+          <button className='info-general__editar' />
           <h3 className='info-general__titulo'>Información General</h3>
           <div className='info-general__container'>
             <div className='info-general__container--personal'>
