@@ -17,10 +17,11 @@
   .article {
     margin-top: 50px;
   }
-  .input {
+  .input{
     display: block;
     width: 85%;
     margin: 15px auto;
+    border: 0;
     @include media(mobile-only) {
       display: flex;
       flex-direction: column;
@@ -41,6 +42,13 @@
       }
       @include media(mobile-only) {
         @include ImageInputGoogle(15vmax, 40px, 22px);
+      }
+      &:focus {
+        border: none;
+      }
+
+      &:active {
+          border: none;
       }
     }
     &__icono--2 {
@@ -93,6 +101,7 @@
       opacity: 0.9;
     }
   }
+
 
   p {
     margin-top: 25px;

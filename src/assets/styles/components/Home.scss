@@ -1,5 +1,4 @@
-@import "../Media.scss";
-@import "../Vars.scss";
+@import "../App.scss";
 
 .main {
     display: flex;
@@ -12,7 +11,7 @@
         width:95%;
     }
     .Busqueda {
-        background-image: url("../../static/roca.jpg");
+        //background-image: url("../../static/roca.jpg");
         background-repeat: no-repeat;
         background-size: 100%;
         object-fit: contain;
@@ -43,7 +42,7 @@
             align-items: center;
           }
           &__icono--1 {
-            background-image: url("../../static/buscar.png");
+            //background-image: url("../../static/buscar.png");
             background-repeat: no-repeat;
             background-position: 4px center;
             background-color: $White;
@@ -60,7 +59,7 @@
             }
           }
           &__icono--2 {
-            background-image: url("../../static/alfiler.png");
+            //background-image: url("../../static/alfiler.png");
             background-repeat: no-repeat;
             background-position: 4px center;
             background-size: 20px;
@@ -91,7 +90,7 @@
           color: $Dorado;
           opacity: 0.9;
         }
-      }
+    }
     .textHome {
         display: grid;
         grid-template-columns: 1fr 1fr;

@@ -4,6 +4,11 @@ import { Link, Redirect } from 'react-router-dom';
 import '../assets/styles/App.scss';
 import '../assets/styles/components/Register.scss';
 import Capturecompu from '../assets/static/Capturecompu.PNG';
+import googleG from '../assets/static/googleG.png';
+import usuario from '../assets/static/usuario.png';
+import credencial from '../assets/static/credencial.png';
+import correo from '../assets/static/correo.png';
+import llave from '../assets/static/llave.png';
 
 export default class Register extends Component {
   state = {};
@@ -44,13 +49,13 @@ export default class Register extends Component {
         <form onSubmit={this.handleSubmit}>
           <section className='Card2'>
             <section className='input'> </section>
-            <div className='input__icono--1'>
+            <div className='input__icono--1' style={{ backgroundImage: `url(${googleG})` }}>
               <input
                 type='text'
                 placeholder='Google'
               />
             </div>
-            <div className='input__icono--2'>
+            <div className='input__icono--2' style={{ backgroundImage: `url(${usuario})` }}>
               <input
                 type='text'
                 id='fullname'
@@ -59,7 +64,7 @@ export default class Register extends Component {
                 onChange={e => (this.fullName = e.target.value)}
               />
             </div>
-            <div className='input__icono--3'>
+            <div className='input__icono--3' style={{ backgroundImage: `url(${credencial})` }}>
               <input
                 type='text'
                 id='username'
@@ -68,7 +73,7 @@ export default class Register extends Component {
                 onChange={e => (this.userName = e.target.value)}
               />
             </div>
-            <div className='input__icono--4'>
+            <div className='input__icono--4' style={{ backgroundImage: `url(${correo})` }}>
               <input
                 type='text'
                 id='email'
@@ -77,7 +82,7 @@ export default class Register extends Component {
                 onChange={e => (this.email = e.target.value)}
               />
             </div>
-            <div className='input__icono--5'>
+            <div className='input__icono--5' style={{ backgroundImage: `url(${llave})` }}>
               <input
                 type='password'
                 id='password'

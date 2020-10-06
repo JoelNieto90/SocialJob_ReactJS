@@ -32,11 +32,17 @@ export default class App extends Component {
     });
   };
 
+  setDelete = (res) => {
+    this.setState({
+      delete: res,
+    });
+  }
+
   render() {
     return (
       <BrowserRouter>
         <div className='App'>
-          <NavBar user={this.state.user} setUser={this.setUser} />
+          <NavBar user={this.state.user} setUser={this.setUser} delete={this.state.delete} setDelete={this.setDelete} />
           <Switch>
             <Route
               exact

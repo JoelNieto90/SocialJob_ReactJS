@@ -5,6 +5,10 @@ import '../assets/styles/App.scss';
 import '../assets/styles/components/Perfil.scss';
 import fotoPrueba from '../assets/static/fotoPrueba.jpg';
 
+import intersect from '../assets/static/Intersect.png';
+import editar from '../assets/static/editar.png';
+
+
 export default class Perfil extends Component {
   state = {};
 
@@ -21,6 +25,7 @@ export default class Perfil extends Component {
           this.setState({
             deleteTrue: true,
           });
+          this.props.setDelete(true);
         })
         .catch((err) => {
           console.log(err);
@@ -50,14 +55,14 @@ export default class Perfil extends Component {
     return (
       <main className='container'>
         <section className='perfil'>
-          <button className='perfil__editar' />
+          <button className='perfil__editar' style={{ backgroundImage: `url(${editar})` }}/>
           <figure className='perfil__img'>
             <img src={fotoPrueba} alt='Foto de perfil' />
           </figure>
           <p className='perfil__datos--nombre'>Luis Orlando Castañeda</p>
           <p className='perfil__datos--edad'>25 años</p>
           <p className='perfil__datos--locacion'>Tonalá, Jalisco</p>
-          <div className='perfil__profesion'>
+          <div className='perfil__profesion' style={{ backgroundImage: `url(${intersect})` }}>
             <p className='perfil__profesion-titulo'>
               Ingeniero en computacion
               {' '}
@@ -76,7 +81,7 @@ export default class Perfil extends Component {
           </Link>
         </div>
         <section className='info-general'>
-          <button className='info-general__editar' />
+          <button className='info-general__editar'/>
           <h3 className='info-general__titulo'>Información General</h3>
           <div className='info-general__container'>
             <div className='info-general__container--personal'>

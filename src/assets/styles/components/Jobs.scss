@@ -10,6 +10,87 @@
   @include media(mobile-only) {
     width: 90%;
   }
+  .Busqueda {
+    //background-image: url("../../static/roca.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    object-fit: contain;
+    border-radius: 40px;
+    height: 250px;
+    @include media(mobile-only) {
+      background-size: 500px;
+      height: 300px;
+      width: 90vw;
+      border-radius: 25px;
+    }
+    h1 {
+      color: $RosaPastel;
+      margin-top: 20px;
+      font-size: calc(1em + 1.1vw);
+      letter-spacing: 5px;
+    }
+    &__input {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 85%;
+      margin: 18px auto;
+      @include media(mobile-only) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      &__icono--1 {
+        //background-image: url("../../static/buscar.png");
+        background-repeat: no-repeat;
+        background-position: 4px center;
+        background-color: $White;
+        margin: 0 5px;
+        @include ImageInput();
+        input {
+          width: 96%;
+          height: 40px;
+          border: 0;
+          outline: none;
+        }
+        @include media(mobile-only) {
+          margin-bottom: 20px;
+        }
+      }
+      &__icono--2 {
+        //background-image: url("../../static/alfiler.png");
+        background-repeat: no-repeat;
+        background-position: 4px center;
+        background-size: 20px;
+        background-color: $White;
+        margin: 0 5px;
+        @include ImageInput();
+        input {
+          width: 96%;
+          height: 40px;
+          border: 0;
+          outline: none;
+        }
+      }
+    }
+    a {
+      display: block;
+      margin: 30px auto;
+      padding-top: 10px;
+      font-size: calc(0.7em + 0.6vw);
+      @include ButtonStyle(250px, 60px, $White, $AzulPastel, $AzulPastel);
+      @include media(mobile-only) {
+        @include ButtonStyle(200px, 45px, $White, $AzulPastel, $AzulPastel);
+        border-radius: 10px;
+      }
+    }
+    a:hover,
+    a:focus {
+      color: $Dorado;
+      opacity: 0.9;
+    }
+  }
   .Cards {
     display: grid;
     grid-template-columns: 30% 20% 48%;

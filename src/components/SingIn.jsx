@@ -5,6 +5,9 @@ import jwtDecode from 'jwt-decode';
 import '../assets/styles/App.scss';
 import '../assets/styles/components/SignIn.scss';
 import SocialJobDark from '../assets/static/SocialJobDark.PNG';
+import googleG from '../assets/static/googleG.png';
+import usuario from '../assets/static/usuario.png';
+import llave from '../assets/static/llave.png';
 
 export default class SingIn extends Component {
   state = {};
@@ -52,20 +55,20 @@ export default class SingIn extends Component {
 
         <section className='input'>
           <form onSubmit={this.handleSubmit}>
-            <div className='input__icono--1'>
+            <div className='input__icono--1' style={{ backgroundImage: `url(${googleG})` }}>
               <input
                 type='text'
                 placeholder='Google'
               />
             </div>
-            <div className='input__icono--2'>
+            <div className='input__icono--2' style={{ backgroundImage: `url(${usuario})` }}>
               <input
                 type='email'
                 placeholder='Email'
                 onChange={e => (this.email = e.target.value)}
               />
             </div>
-            <div className='input__icono--3'>
+            <div className='input__icono--3' style={{ backgroundImage: `url(${llave})` }}>
               <input
                 type='password'
                 placeholder='Password'

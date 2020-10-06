@@ -8,6 +8,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+ input:active, input:focus {
+   border: 0;
+   outline: none;
+ }
 
 a,
 ul {
