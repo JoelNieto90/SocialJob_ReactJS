@@ -1,27 +1,53 @@
-import React, { Component } from "react";
-import axios from "axios";
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Link, Redirect } from 'react-router-dom';
 import '../assets/styles/App.scss';
 import '../assets/styles/components/Perfil.scss';
 import fotoPrueba from '../assets/static/fotoPrueba.jpg';
 
 export default class Perfil extends Component {
+  state = {};
+
+  handleClick = (e) => {
+    if (this.props.user) {
+      const { id } = this.props.user;
+      e.preventDefault();
+      axios
+        .delete(`/user/${id}`)
+        .then((res) => {
+          console.log(res);
+          console.log('Usuario Eliminado');
+          localStorage.clear();
+          this.setState({
+            deleteTrue: true,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  };
+
   render() {
     if (this.props.user) {
-      let id = this.props.user.id;
+      const { id } = this.props.user;
       axios
-      .get(`/user/${id}`)
+        .get(`/user/${id}`)
         .then((res) => {
           console.log(res);
           console.log(res.data.data);
-          let fullname = res.data.data.fullname;
+          const { fullname } = res.data.data;
         })
         .catch((err) => {
           console.log(err);
         });
     }
 
-    return(
+    if (this.state.deleteTrue) {
+      return <Redirect to='/' />;
+    }
+
+    return (
       <main className='container'>
         <section className='perfil'>
           <button className='perfil__editar' />
@@ -32,9 +58,18 @@ export default class Perfil extends Component {
           <p className='perfil__datos--edad'>25 años</p>
           <p className='perfil__datos--locacion'>Tonalá, Jalisco</p>
           <div className='perfil__profesion'>
-            <p className='perfil__profesion-titulo'>Ingeniero en computacion </p>
+            <p className='perfil__profesion-titulo'>
+              Ingeniero en computacion
+              {' '}
+            </p>
           </div>
+          <section>
+            <Link to='/' className='button' onClick={this.handleClick}>
+              Delete User
+            </Link>
+          </section>
         </section>
+
         <div className='favoritos'>
           <Link to='/Favoritos'>
             <button className='favoritos__boton'>Favorite Jobs</button>
@@ -103,7 +138,7 @@ export default class Perfil extends Component {
           </div>
         </section>
       </main>
-    )
+    );
   }
 }
 

@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import '../assets/styles/App.scss';
 import '../assets/styles/components/Register.scss';
 import Capturecompu from '../assets/static/Capturecompu.PNG';
 
 export default class Register extends Component {
+  state = {};
+
   handleSubmit = (e) => {
     e.preventDefault();
 
@@ -20,11 +22,17 @@ export default class Register extends Component {
       .post('/user/signup', data)
       .then((res) => {
         console.log(res);
+        this.setState({
+          registerTrue: true,
+        });
       })
       .catch(err => console.log(err));
   };
 
   render() {
+    if (this.state.registerTrue) {
+      return <Redirect to='/signin' />;
+    }
     return (
       <main className='mainRegister'>
         <section className='Card1'>

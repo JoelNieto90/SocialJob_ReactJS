@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import '../assets/styles/App.scss';
 import '../assets/styles/components/Published.scss';
 
@@ -29,6 +29,7 @@ export default class Published extends Component {
       .post(`/post/${id}`)
       .then((res) => {
         console.log(res);
+        return <Redirect to='/jobs' />;
       })
       .catch(err => console.log(err));
   };
@@ -132,9 +133,7 @@ export default class Published extends Component {
                     onChange={e => (this.skills = e.target.value)}
                   />
                 </div>
-                <section className='buttonText'>
-                  <button className='button'>Register</button>
-                </section>
+                <button className='button'>Register</button>
               </section>
             </section>
           </form>
