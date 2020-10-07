@@ -17,6 +17,11 @@ export default class RegisterUpdate extends Component {
     e.preventDefault();
     const { id } = this.props.user;
 
+    const config = {
+      //headers: { Authorization: `Bearer ${token}` },
+      headers: { Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmN2QwODk1MjM5OWMwMDAxNzRmNjkyYiIsImVtYWlsIjoiZ29vbEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imdvb2wiLCJpYXQiOjE2MDIwODExMTd9.ZmpSupCnpD2rI6MUjEimiprei7fCSdre-rd4OWZw8W8' },
+    };
+
     const data = {
       fullname: this.fullName,
       username: this.userName,
@@ -25,12 +30,9 @@ export default class RegisterUpdate extends Component {
     };
 
     axios
-      .put(`/user/${id}`, data)
+      .put(`/user/${id}`, data, config)
       .then((res) => {
         console.log(res);
-        this.setState({
-          registerTrue: true,
-        });
       })
       .catch(err => console.log(err));
   };

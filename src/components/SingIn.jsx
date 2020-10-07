@@ -26,17 +26,13 @@ export default class SingIn extends Component {
         localStorage.setItem('token', res.data.data.token);
         const { token } = res.data.data;
         const decode = jwtDecode(token);
-        const { id } = decode;
-        const { username } = decode;
-        const { email } = decode;
-        console.log(decode);
-        console.log(id);
+        const email = decode.email;
         console.log(email);
-        console.log(username);
+        console.log(token);
         this.setState({
           loggedIn: true,
         });
-        this.props.setUser(decode);
+        this.props.setUser(token, decode);
       })
       .catch((err) => {
         console.log(err);

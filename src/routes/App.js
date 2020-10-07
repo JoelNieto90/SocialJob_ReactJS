@@ -27,8 +27,9 @@ export default class App extends Component {
       });
   };
 
-  setUser = (decode) => {
+  setUser = (token, decode) => {
     this.setState({
+      clave: token,
       user: decode,
     });
   };
@@ -73,7 +74,7 @@ export default class App extends Component {
             <Route
               exact
               path='/published'
-              component={() => <Published user={this.state.user} />}
+              component={() => <Published user={this.state.user} clave={this.state.clave} />}
             />
             <Route
               exact

@@ -8,7 +8,20 @@ import MovileSocialJobs from '../assets/static/MovileSocialJobs.PNG';
 import BannerPublished from '../assets/static/BannerPublished.PNG';
 
 export default class Published extends Component {
+  state = {};
+
   handleSubmit = (e) => {
+    const { id } = this.props.user;
+    console.log(id);
+
+    const { token } = this.props.user;
+    console.log(token);
+
+    const config = {
+      //headers: { Authorization: `Bearer ${token}` },
+      headers: { Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmN2QwODk1MjM5OWMwMDAxNzRmNjkyYiIsImVtYWlsIjoiZ29vbEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imdvb2wiLCJpYXQiOjE2MDIwODExMTd9.ZmpSupCnpD2rI6MUjEimiprei7fCSdre-rd4OWZw8W8' },
+    };
+
     e.preventDefault();
     const data = {
       position: this.position,
@@ -16,20 +29,20 @@ export default class Published extends Component {
       salary: this.salary,
       country: this.country,
       city: this.city,
-      jobURL: this.jobURL,
-      imageURL: this.imageURL,
+      url: this.jobURL,
+      image: this.imageURL,
       description: this.description,
-      skills: this.skills,
-      raiting: this.raiting,
+      skill: this.skills,
+      rating: this.raiting,
+      user: id,
     };
 
-    const id = this.props.user.id;
-    console.log(id);
+    console.log(data);
+
     axios
-      .post(`/post/${id}`)
+      .post('/post/create/', data, config)
       .then((res) => {
         console.log(res);
-        return <Redirect to='/jobs' />;
       })
       .catch(err => console.log(err));
   };

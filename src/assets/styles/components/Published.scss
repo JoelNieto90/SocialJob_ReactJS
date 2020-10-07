@@ -127,3 +127,20 @@
     opacity: 0.9;
   }
   
+  .button {
+    display: block;
+    margin: auto;
+    padding-top: 5px;
+    margin-bottom: 15px;
+    font-size: calc(0.7em + 0.6vw);
+    @include ButtonStyle(220px, 50px, $White, $AzulPastel, $AzulPastel);
+    @include media(mobile-only) {
+      @include ButtonStyle(130px, 35px, $White, $AzulPastel, $AzulPastel);
+      border-radius: 25px;
+    }
+  }
+  .button:hover,
+  .button:focus {
+    color: $Dorado;
+    opacity: 0.9;
+  }
