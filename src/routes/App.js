@@ -79,7 +79,7 @@ export default class App extends Component {
             <Route
               exact
               path='/jobs'
-              component={Jobs}
+              component={() => <Jobs user={this.state.user} />}
             />
             <Route
               exact

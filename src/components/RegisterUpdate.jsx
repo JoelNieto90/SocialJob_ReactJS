@@ -51,7 +51,6 @@ export default class RegisterUpdate extends Component {
 
         <form onSubmit={this.handleSubmit}>
           <section className='Card2'>
-            <section className='input'> </section>
             <div className='input__icono--1' style={{ backgroundImage: `url(${googleG})` }}>
               <input
                 type='text'
