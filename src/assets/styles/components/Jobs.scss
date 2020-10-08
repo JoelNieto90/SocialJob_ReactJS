@@ -190,6 +190,17 @@
           font-size: calc(0.6em + 0.5vw);
         }
       }
+      .favorite {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        text-align: center;
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
     }
 
     &__Image {

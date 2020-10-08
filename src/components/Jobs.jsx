@@ -8,6 +8,7 @@ import iconoBuscar from '../assets/static/buscar.png';
 import iconoMaps from '../assets/static/alfiler.png';
 import iconStart from '../assets/static/Start1.png';
 import edificio from '../assets/static/Edificio.PNG';
+import favorite from '../assets/static/favorito.png';
 
 export default class Jobs extends Component {
   constructor(props) {
@@ -89,6 +90,16 @@ export default class Jobs extends Component {
                       <Link to='#'>{jobs.skill[3]}</Link>
                     </div>
                   </section>
+
+                  <section className='favorite'>
+                    <button type='button'>
+                      <p>
+                        <img src={favorite} alt='Agregar a favoritos' />
+                        Agregar a Favoritos
+                      </p>
+                    </button>
+                  </section>
+
                 </article>
                 <article className='Cards__Image'>
                   <img src={edificio} loading='lazy' alt='Imagen Empresa' />
