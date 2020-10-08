@@ -32,7 +32,7 @@ export default class Published extends Component {
       url: this.jobURL,
       image: this.imageURL,
       description: this.description,
-      skill: this.skills,
+      skill: [this.skills1, this.skills2, this.skills3, this.skills4],
       rating: this.raiting,
       user: id,
     };
@@ -139,11 +139,35 @@ export default class Published extends Component {
                   />
                 </div>
                 <div className='published__Text__Inputs'>
-                  <label>Skils</label>
+                  <label>Skill 1</label>
                   <input
                     type='text'
                     placeholder='Skills'
-                    onChange={e => (this.skills = e.target.value)}
+                    onChange={e => (this.skills1 = e.target.value)}
+                  />
+                </div>
+                <div className='published__Text__Inputs'>
+                  <label>Skill 2</label>
+                  <input
+                    type='text'
+                    placeholder='Skills'
+                    onChange={e => (this.skills2 = e.target.value)}
+                  />
+                </div>
+                <div className='published__Text__Inputs'>
+                  <label>Skill 3</label>
+                  <input
+                    type='text'
+                    placeholder='Skills'
+                    onChange={e => (this.skills3 = e.target.value)}
+                  />
+                </div>
+                <div className='published__Text__Inputs'>
+                  <label>Skill 4</label>
+                  <input
+                    type='text'
+                    placeholder='Skills'
+                    onChange={e => (this.skills4 = e.target.value)}
                   />
                 </div>
                 <button className='button'>Register</button>
