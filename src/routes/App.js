@@ -101,23 +101,3 @@ export default class App extends Component {
     );
   }
 }
-
-/*const App = () => (
-  <BrowserRouter>
-    <Layout>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/signin' component={SignIn} />
-        <Route exact path='/register' component={Register} />
-        <Route exact path='/aboutus' component={AboutUs} />
-        <Route exact path='/published' component={Published} />
-        <Route exact path='/jobs' component={Jobs} />
-        <Route exact path='/perfil' component={Perfil} />
-        <Route exact path='/restorepassword' component={RestorePassword} />
-        <Route component={NotFound} />
-      </Switch>
-    </Layout>
-  </BrowserRouter>
-);
-
-export default App;*/

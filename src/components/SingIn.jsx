@@ -27,8 +27,6 @@ export default class SingIn extends Component {
         const { token } = res.data.data;
         const decode = jwtDecode(token);
         const email = decode.email;
-        console.log(email);
-        console.log(token);
         this.setState({
           loggedIn: true,
         });
@@ -86,36 +84,3 @@ export default class SingIn extends Component {
     );
   }
 }
-
-/*
-const SignIn = () => (
-  <main className='mainSignIn'>
-    <article className='article'>
-      <img src={SocialJobDark} alt='Logo Social Job del Formulario' />
-    </article>
-    <section className='input'>
-      <div className='input__icono--1'>
-        <input type='text' name='input' placeholder='Google' />
-      </div>
-      <div className='input__icono--2'>
-        <input type='text' name='input' placeholder='User' />
-      </div>
-      <div className='input__icono--3'>
-        <input type='password' name='input' placeholder='Password' />
-      </div>
-    </section>
-    <section className='buttonText'>
-      <Link to='Jobs.html'>Sign In</Link>
-    </section>
-    <p>
-      <Link to='/restorepassword'>I do not remember my password</Link>
-    </p>
-    <p>
-      {' '}
-      <Link to='/register'>No yet a member? Sign Up</Link>
-    </p>
-  </main>
-);
-
-export default SignIn;
-*/

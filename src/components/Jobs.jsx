@@ -22,7 +22,6 @@ export default class Jobs extends Component {
     axios.get('/post/').then(
       (res) => {
         const { data } = res.data;
-        console.log(data);
         this.setState({
           jobs: data,
         });
